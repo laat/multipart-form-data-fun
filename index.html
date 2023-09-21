@@ -2,10 +2,10 @@
 
 <form id="form">
   <input type="text" name="hello" placeholder="Enter a message" />
-  <button type="submit" id="submit">Send</button>
+  <button type="submit">Send</button>
 </form>
 
-<pre><code id="code"></code></pre>
+<pre><code id="ui"></code></pre>
 
 <script>
   form.onsubmit = async function (event) {
@@ -18,6 +18,6 @@
 
     // we understand multipart/form-data in the response!
     const responseData = await response.formData();
-    code.textContent = responseData.get('hello');
+    ui.textContent = responseData.get('hello');
   };
 </script>
