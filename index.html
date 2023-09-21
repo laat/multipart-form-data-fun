@@ -8,8 +8,9 @@
 <pre><code id="code"></code></pre>
 
 <script>
-  form.addEventListener('submit', async (event) => {
+  form.onsubmit = async function (event) {
     event.preventDefault();
+
     const response = await fetch('/api', {
       method: 'POST',
       body: new FormData(form),
@@ -18,5 +19,5 @@
     // we understand multipart/form-data in the response!
     const responseData = await response.formData();
     code.textContent = responseData.get('hello');
-  });
+  };
 </script>

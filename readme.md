@@ -1,6 +1,6 @@
-# multipart/form-data experiment
+# multipart/form-data responses 🤡
 
-This is a simple experiment to test `multipart/form-data`, both as a request and response.
+This is a simple experiment to test `multipart/form-data` as a server response.
 
 ```sh
 npm install
