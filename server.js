@@ -9,10 +9,8 @@ app.use(multipart());
 app.post('/api', (req, res) => {
   const form = new FormData();
   form.append('hello', `from the server, you typed: ${req.body.hello}`);
-  res.setHeader(
-    'Content-Type',
-    'multipart/form-data; boundary=' + form.getBoundary()
-  );
+
+  res.set(form.getHeaders());
   form.pipe(res);
 });
 
